@@ -12,7 +12,7 @@ public class MainApp {
         KafkaProducer<String, String> producer = factory.kafkaProducer();
 
         long start = System.currentTimeMillis();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 10; i++) {
             factory.sendMessage("New Message : " + i, producer);
         }
         long end = System.currentTimeMillis();
